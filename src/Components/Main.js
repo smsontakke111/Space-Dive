@@ -6,7 +6,6 @@ import News from './News';
 import ImageGallery from './ImageGallery';
 import VideoGallery from './VideoGallery';
 import {Switch , Redirect , Route} from 'react-router-dom';
-import Launches from './Launches';
 import Media from './Media';
 import Mars from './Mars';
 
@@ -25,7 +24,6 @@ const Main = () => {
                 <Route path='/gallery/images' exact component={() => <ImageGallery media={media} setMedia={setMedia}  />} />
                 <Route path='/gallery/videos' exact component={() => <VideoGallery media={media} setMedia={setMedia}  />} />
                 <Route path='/gallery/:id' component={ () => <Media media={media} setMedia={setMedia}  />} />
-                <Route path='/launches' component={Launches} />
                 <Route path='/mars' component={Mars} />
                 <Redirect to='/home' />
             </Switch>

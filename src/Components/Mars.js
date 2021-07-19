@@ -5,6 +5,7 @@ import { Button, Form, Input, InputGroup } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
 import { setGlobalCssModule } from 'reactstrap/es/utils';
 import CloseIcon from '@material-ui/icons/Close';
+import Fade from 'react-reveal';
  
 
 const Mars = () => { 
@@ -63,9 +64,11 @@ const Mars = () => {
             var roverpics = rover.map((r) => {
 
                 return (
+                    <Fade bottom>
                     <div className='pics p-2 shadow' onClick={()=>getImg(r)}>
                         <img src={r.img_src} className='rounded' style={{width:'100%'}}/>
                     </div>
+                    </Fade>
                 );
             })
 
@@ -127,7 +130,16 @@ const Mars = () => {
         );
     }
 
-    return <div><center>Something went wrong !</center></div>;
+    return (
+        <div className='p-4' style={{ height: '80vh' }}>
+            <center>
+                <div class="spinner-border " role="status" style={{ marginTop: "25vh", fontSize: '50%' }}>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </center>
+        </div>
+
+    );
 
 }
 

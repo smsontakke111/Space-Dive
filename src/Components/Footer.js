@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 
 const Footer = () => {
 
@@ -7,22 +6,22 @@ const Footer = () => {
         <div className='row p-3' style={{backgroundColor: 'rgb(2, 13, 48)' }}>
                 <div className='col-lg-1 col-6 col-sm-3 offset-lg-4'>
                     <center>
-                    <NavLink className=' nav-link ' id='social' to='#'  >GITHUB</NavLink>
+                    <a className=' nav-link ' id='social' target='_blank' href='https://github.com/smsontakke111'  >GITHUB</a>
                     </center>
                 </div>
                 <div className='col-lg-1 col-6 col-sm-3'>
                     <center>
-                <NavLink className=' nav-link ' id='social' to='#'  >LINKEDIN</NavLink>
+                <a className=' nav-link ' id='social' target='_blank' href='https://linkedin.com/in/sushant-sontakke'  >LINKEDIN</a>
                 </center>
                 </div>
                 <div className='col-lg-1 col-6 col-sm-3'>
                 <center>
-                <NavLink className=' nav-link ' id='social' to='#' >INSTAGRAM</NavLink>
+                <a className=' nav-link ' id='social' target='_blank' href='https://www.instagram.com/sushant_sontakke_11/' >INSTAGRAM</a>
                 </center>
                 </div>
                 <div className='col-lg-1 col-6 col-sm-3'>
                 <center>
-                <NavLink className=' nav-link ' id='social' to='#' >TWITTER</NavLink>
+                <a className=' nav-link ' id='social' target='_blank' href='https://twitter.com/sushant28382346' >TWITTER</a>
                 </center>
                 </div>
                 

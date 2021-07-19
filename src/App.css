@@ -10,6 +10,14 @@
   color: white;
 }
 
+.main-text{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 70px;
+  color: white;
+  margin-top: 25vh;
+  letter-spacing: 30px;
+}
+
 .text-1{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 30px;
@@ -99,6 +107,13 @@
     -moz-column-count: 2;
     column-count: 2;
   }
+  .main-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: white;
+    margin-top: 25vh;
+    letter-spacing: 20px;
+  }
 
 }
 
@@ -110,6 +125,13 @@
     -webkit-column-width: 100%;
     -moz-column-width: 100%;
     column-width: 100%;
+  }
+  .main-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color: white;
+    margin-top: 25vh;
+    letter-spacing: 5px;
   }
   
 }

@@ -24,7 +24,7 @@ const Header = (props) => {
             return (
               <div >
                 <Navbar style={{ backgroundColor: 'rgb(2, 13, 48)' }} dark expand='lg' className='p-4'>
-                <NavbarBrand href="/" className="mr-auto"><h3 style={{fontFamily:"sans-serif"}}> SPACE-DIVE</h3></NavbarBrand>
+                <NavbarBrand href="/" className="mr-auto"><h3 style={{fontFamily:"sans-serif",letterSpacing:"5px"}}> SPACE-DIVE</h3></NavbarBrand>
                 <NavbarToggler onClick={toggle} className="mr-2 ml-auto" />
                 <Collapse isOpen={isOpen} navbar >
 
@@ -34,9 +34,6 @@ const Header = (props) => {
                         </NavItem>
                         <NavItem>
                             <NavLink className='mx-5 nav-link' to='/news' ><b>NEWS</b></NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className='mx-5 nav-link' to='/launches' ><b>LAUNCHES</b></NavLink>
                         </NavItem>
                         <NavItem>
                             

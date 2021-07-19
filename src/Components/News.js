@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, Button, CardText, CardTitle } from 'reactstrap';
-import {Stagger , Fade , FadeTransform} from 'react-animation-components';
-
+import {  Button, CardText, CardTitle } from 'reactstrap';
+import {Stagger , Fade } from 'react-animation-components';
+import Zoom from 'react-reveal';
 
 const News = () => {
 
@@ -26,20 +26,30 @@ const News = () => {
 
     if(news == null)
     {
-        return <div><center>Something went wrong !</center></div>
+        return (
+            <div className='p-4' style={{ height: '80vh' }}>
+                <center>
+                    <div class="spinner-border " role="status" style={{ marginTop: "25vh", fontSize: '50%' }}>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </center>
+            </div>
+
+        );
     }
 
     var addCount = () => {
         
-        setCount(count +5);
+        setCount(count +10);
         getNews();
     }
 
     var newsCards = news.map((n) => {
 
         return(
+            
                     <Fade in   >
-                    <FadeTransform in transformProps={{exitTransform : 'scale(0.5) translateY(-50%)'}}>
+                        <Zoom bottom>
                     <div className='row shadow-lg   my-5 p-0 cardbody'>
                         <div className='col-12 col-lg-6'>
                         <center>
@@ -61,7 +71,8 @@ const News = () => {
                                 </div>
                         </div>
                     </div>   
-                    </FadeTransform>
+                   
+                    </Zoom>
                     </Fade>         
             
         );
@@ -77,7 +88,7 @@ const News = () => {
 
                 <br/><br/>
                 <center>
-                    <a className='text-3 see-more' onClick={addCount}>See more ...</a>
+                    <Button className='text-3 see-more' color='dark' onClick={addCount}>See more</Button>
                 </center>
                 <br/>
 

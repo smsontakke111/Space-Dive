@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Form, Input, InputGroup } from 'reactstrap';
 import {NavLink} from 'react-router-dom';
+import Zoom from 'react-reveal';
 
 
 const VideoGallery = (props) => {
@@ -23,7 +24,16 @@ const VideoGallery = (props) => {
 
     if(gallery == null)
     {
-        return <div><center>Something went wrong !</center></div>;
+        return (
+            <div className='p-4' style={{ height: '80vh' }}>
+                <center>
+                    <div class="spinner-border " role="status" style={{ marginTop: "25vh", fontSize: '50%' }}>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </center>
+            </div>
+
+        );
     }
 
     const handler = (g) => {
@@ -44,6 +54,7 @@ const VideoGallery = (props) => {
             if(l.href.includes('jpg'))
             return (
                 <NavLink to={'/gallery/' + g.data[0].nasa_id} style={{textDecoration:'none'}} onClick={() => handler(g)} >
+                    <Zoom bottom>
                     <div className='pics p-2 shadow  ' >
                         
                         <embed src={l.href} className='rounded'  style={{width:'100%'}} />
@@ -53,6 +64,7 @@ const VideoGallery = (props) => {
                             <b style={{color:'whitesmoke' }}> {g.data[0].title.split('- Video')[0]}</b>
                         </center>
                     </div>
+                    </Zoom>
                 </NavLink>
                 
                 
